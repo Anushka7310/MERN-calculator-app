@@ -85,12 +85,22 @@ function KeyPad(props) {
     <div className="keypad">
       <div className="keypad_keys">
         {keys.map((item, index) => (
-          <p key={index}>{item.label}</p>
+          <p
+            onClick={() => props.handleKeyPress(item.keyCode, item.label)}
+            key={index}
+          >
+            {item.label}
+          </p>
         ))}
       </div>
       <div className="keypad_symbols">
         {symbols.map((item, index) => (
-          <p key={index}>{item.label}</p>
+          <p
+            onClick={() => props.handleKeyPress(item.keyCode, item.value)}
+            key={index}
+          >
+            {item.label}
+          </p>
         ))}
       </div>
     </div>
