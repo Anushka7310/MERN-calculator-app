@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Header from "./Components/Header/Header";
+import KeyPad from "./Components/KeyPad/KeyPad";
+import moonIcon from "./assets/moon.png";
+import sunIcon from "./assets/sun.png";
+import "./App.css";
 
 function App() {
+  const [isDarkMode, setIsDarkMode] = useState(false);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app" data-theme={isDarkMode ? "dark" : ""}>
+      <div className="app_calculator">
+        <div className="app_calculator_navbar">
+          <div
+            className="app_calculator_navbar_toggle"
+            onClick={() => setIsDarkMode(!isDarkMode)}
+          >
+            <div
+              className={`app_calculator_navbar_toggle_circle
+            ${isDarkMode ? "app_calculator_navbar_toggle_circle_active" : ""}`}
+            />
+          </div>
+          <img src={isDarkMode ? moonIcon : sunIcon} alt="mode" />
+        </div>
+        <Header />
+        <KeyPad />
+      </div>
     </div>
   );
 }
