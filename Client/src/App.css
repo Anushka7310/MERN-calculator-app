@@ -28,23 +28,24 @@
   background-color: gray;
 }
 
-.app {
-  background: #2a6c84;
-  min-height: 100vh;
+.app_calculator {
+  border-radius: 5px;
+  background-color: #00acf3;
+  box-shadow: 1px -1px 20px rgba(0, 0, 0, 0.15);
+  position: absolute;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: row;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-height: 40vh;
+  width: 500px;
+  justify-content: space-between;
 }
 
-.app_calculator {
-  height: 500px;
-  width: 280px;
-  border-radius: 30px;
-  box-shadow: 1px -1px 20px rgba(0, 0, 0, 0.15);
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
+.history_panel {
+  margin-top: -2%;
+  margin-left: -2%;
 }
 
 .app_calculator_navbar {

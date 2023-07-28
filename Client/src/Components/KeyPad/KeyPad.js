@@ -4,28 +4,23 @@ import "./KeyPad.css";
 function KeyPad(props) {
   const keys = [
     {
-      keyCode: 55,
-      label: "7",
+      label: "C",
+      keyCode: 67,
     },
     {
-      keyCode: 56,
-      label: "8",
+      label: "+/-",
+      keyCode: 80,
+      value: "changes spacing",
     },
     {
-      keyCode: 57,
-      label: "9",
-    },
-    {
-      keyCode: 52,
-      label: "4",
-    },
-    {
+      label: "%",
       keyCode: 53,
-      label: "5",
+      value: "modulos",
     },
     {
-      keyCode: 54,
-      label: "6",
+      label: "/",
+      keyCode: 191,
+      value: "slash",
     },
     {
       keyCode: 49,
@@ -40,6 +35,46 @@ function KeyPad(props) {
       label: "3",
     },
     {
+      label: "×",
+      keyCode: 56,
+      value: "*",
+    },
+    {
+      keyCode: 52,
+      label: "4",
+    },
+    {
+      keyCode: 53,
+      label: "5",
+    },
+    {
+      keyCode: 54,
+      label: "6",
+    },
+    {
+      label: "﹣",
+      keyCode: 109,
+      value: "-",
+    },
+    {
+      keyCode: 55,
+      label: "7",
+    },
+    {
+      keyCode: 56,
+      label: "8",
+    },
+    {
+      keyCode: 57,
+      label: "9",
+    },
+    {
+      label: "+",
+      keyCode: 107,
+      value: "+",
+    },
+
+    {
       keyCode: 48,
       label: "0",
     },
@@ -53,50 +88,15 @@ function KeyPad(props) {
     },
   ];
 
-  const symbols = [
-    {
-      label: "⌫",
-      keyCode: 8,
-      value: "backspace",
-    },
-    {
-      label: "÷",
-      keyCode: 111,
-      value: "/",
-    },
-    {
-      label: "×",
-      keyCode: 56,
-      value: "*",
-    },
-    {
-      label: "﹣",
-      keyCode: 109,
-      value: "-",
-    },
-    {
-      label: "+",
-      keyCode: 107,
-      value: "+",
-    },
-  ];
-
   return (
     <div className="keypad">
       <div className="keypad_keys">
         {keys.map((item, index) => (
           <p
-            onClick={() => props.handleKeyPress(item.keyCode, item.label)}
-            key={index}
-          >
-            {item.label}
-          </p>
-        ))}
-      </div>
-      <div className="keypad_symbols">
-        {symbols.map((item, index) => (
-          <p
-            onClick={() => props.handleKeyPress(item.keyCode, item.value)}
+            className={item.label === "0" && "wide"}
+            onClick={() =>
+              props.handleKeyPress(item.keyCode, item.value || item.label)
+            }
             key={index}
           >
             {item.label}

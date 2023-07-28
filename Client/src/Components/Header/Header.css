@@ -1,8 +1,24 @@
 .header {
-  flex: 1;
-  background-color: var(--bg-color-1);
+  border-radius: 5px;
+  width: 225px;
+  background-color: #2f4452;
+}
+
+.result_section {
   padding: 20px;
-  overflow-y: scroll;
+  display: flex;
+  justify-content: space-between;
+}
+
+.result {
+  font-size: 1.6rem !important;
+  font-weight: 600;
+}
+
+.expression {
+  background-color: #2a3b45;
+  overflow-x: scroll;
+  min-height: 30px;
 }
 
 .header p {
@@ -13,20 +29,54 @@
   justify-content: flex-end;
 }
 
-.header_expression {
-  overflow-x: scroll;
-  width: 100%;
-  min-height: 30px;
-}
-
 .header_expression p {
   white-space: nowrap;
   min-width: 100%;
   width: fit-content;
   font-weight: bold;
 }
-.header_result {
-  font-weight: bold;
-  font-size: 1.3rem !important;
-  min-height: 30px;
+
+.history {
+  padding: 10px;
+}
+
+.history-symbol {
+  color: white;
+  font-weight: 500;
+  padding: 10px 0;
+}
+
+.history-container {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  direction: rtl;
+  padding-left: 5px;
+  height: 160px;
+}
+
+.history-items {
+  display: flex;
+  justify-content: space-between;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #3c444e;
+  border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #235a88;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
