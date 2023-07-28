@@ -1,0 +1,29 @@
+{
+  "name": "mern-calculator-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Anushka7310/MERN-calculator-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Anushka7310/MERN-calculator-app/issues"
+  },
+  "homepage": "https://github.com/Anushka7310/MERN-calculator-app#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "concurrently": "^8.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mathjs": "^11.9.1",
+    "mongoose": "^7.4.1"
+  }
+}
